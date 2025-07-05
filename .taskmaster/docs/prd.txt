@@ -1,0 +1,90 @@
+<context>
+# Overview  
+Assistant V1 is a next-generation personalized assistant for Mac, aiming to become the Siri that Apple failed to build. It is designed to be a state-of-the-art, always-available agent (like Tony Stark's JARVIS) that can be improved over time, perform actions and services on behalf of the user, and is easy to set up (just download from GitHub and provide API keys if needed).
+
+# Core Features  
+- **Background Listening & Activation**: Runs in the background and listens for user requests when a customizable shortcut is pressed.
+- **Voice-First, Multilingual Input**: Accepts voice input in German (primary) and English, with all responses in German. Understands both languages seamlessly.
+- **Intelligent Brain (MCP Architecture)**: Uses a modular "brain" to decide if it can answer instantly (using a local LLM) or needs to call other MCPs for actions.
+- **Modular Actions**: Actions are modular and easy to extend. The first action is autonomous web search to answer user queries.
+- **Customizable Voice & Personality**: Users can choose the assistant's voice and provide a system prompt to alter its tone (e.g., sarcastic like Iron Man's assistant).
+- **Simple Launch & Local LLM Support**: MVP launches via terminal/script, ensuring the local LLM is running for communication.
+- **Mac Menu Bar UI**: Sits in the Mac top bar (like Ollama), with a settings menu for customizing voice, system prompt, temperature, and shortcut. Settings persist across restarts.
+- **Visual Listening Indicator**: Menu bar icon changes color when listening, and is neutral when idle.
+- **Conversational Flow**: Can ask clarifying questions and wait for user confirmation (e.g., before sending emails in future versions).
+
+# User Experience  
+- **Target User**: General public of Mac users frustrated with Siri's limitations.
+- **User Flow**:
+  1. User launches Assistant V1 (via terminal/script for MVP).
+  2. Assistant runs in the background, ready to listen.
+  3. User presses and holds the shortcut; icon indicates listening.
+  4. User speaks a request (in German or English).
+  5. Assistant processes the request, performs actions (e.g., web search), and replies in German.
+  6. User can customize settings via the menu bar UI.
+  7. All interactions and actions are logged for transparency and improvement.
+- **UI/UX Considerations**:
+  - Minimal, non-intrusive menu bar presence
+  - Clear visual feedback for listening/idle
+  - Intuitive settings menu
+  - Fast, low-latency responses
+</context>
+<PRD>
+# Technical Architecture  
+- **System Components**:
+  - Background service/daemon for Mac
+  - Voice input handler (German/English recognition)
+  - Local LLM integration (with fallback to remote if needed)
+  - MCP-based "brain" for routing requests/actions
+  - Modular action system (first: web search)
+  - Menu bar UI (Electron/Swift/other)
+  - Persistent settings storage
+  - Logging system for all interactions
+- **Data Models**:
+  - User settings (voice, prompt, shortcut, temperature)
+  - Interaction logs
+  - Modular action registry
+- **APIs & Integrations**:
+  - Local LLM API (Ollama or similar)
+  - Web search API (first action)
+  - Future: Apple Mail, Apple Notes, WhatsApp, etc.
+- **Infrastructure Requirements**:
+  - Must run efficiently on Mac (Apple Silicon/Intel)
+  - Minimal external dependencies for MVP
+
+# Development Roadmap  
+- **MVP Requirements**:
+  - Background service with customizable shortcut
+  - Voice input (German/English), reply in German
+  - Local LLM integration
+  - Modular action system (web search as first action)
+  - Menu bar UI with settings
+  - Visual listening indicator
+  - Persistent settings
+  - Logging of all actions/interactions
+- **Future Enhancements**:
+  - Additional actions (email, notes, WhatsApp, etc.)
+  - More advanced conversational memory
+  - Enhanced UI/UX (e.g., notifications, chat history)
+  - Cloud sync for settings/logs
+  - Advanced voice customization
+
+# Logical Dependency Chain
+- Foundation: Background service, voice input, local LLM, menu bar UI
+- Next: Modular action system, web search integration
+- Then: Settings persistence, logging, visual indicators
+- After MVP: Add new actions, improve memory, expand integrations
+
+# Risks and Mitigations  
+- **Technical Challenges**: Real-time voice recognition, low-latency LLM responses, robust background service on Mac
+  - *Mitigation*: Use proven libraries, start with MVP scope, optimize iteratively
+- **MVP Scope Creep**: Too many features at once
+  - *Mitigation*: Strictly limit MVP to core features, modularize for easy future expansion
+- **Resource Constraints**: Local LLM performance, Mac compatibility
+  - *Mitigation*: Test on multiple Mac setups, provide clear setup instructions
+
+# Appendix  
+- Consider chat clearing and persistent memory for future versions
+- All actions/interactions should be logged for transparency and debugging
+- Evaluate best approach for background service/daemon on Mac
+</PRD> 

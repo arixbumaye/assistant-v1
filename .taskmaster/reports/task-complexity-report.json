@@ -1,0 +1,93 @@
+{
+	"meta": {
+		"generatedAt": "2025-07-05T09:30:14.617Z",
+		"tasksAnalyzed": 10,
+		"totalTasks": 10,
+		"analysisCount": 10,
+		"thresholdScore": 5,
+		"projectName": "Taskmaster",
+		"usedResearch": true
+	},
+	"complexityAnalysis": [
+		{
+			"taskId": 1,
+			"taskTitle": "Setup Project Repository",
+			"complexityScore": 4,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "What are the necessary files and directories for the project repository?",
+			"reasoning": "This task involves creating a new GitHub repository, which is a relatively straightforward process. However, it may require some setup and configuration to ensure everything is in order."
+		},
+		{
+			"taskId": 2,
+			"taskTitle": "Implement Background Service for Mac",
+			"complexityScore": 8,
+			"recommendedSubtasks": 4,
+			"expansionPrompt": "What are the necessary APIs and integrations required for voice input, local LLM integration, and menu bar UI?",
+			"reasoning": "This task involves developing a background service/daemon for Mac, which requires expertise in Swift or Electron. Additionally, it needs to integrate with other components, making it more complex."
+		},
+		{
+			"taskId": 3,
+			"taskTitle": "Implement Voice Input Handler",
+			"complexityScore": 7,
+			"recommendedSubtasks": 3,
+			"expansionPrompt": "What are the necessary libraries and integrations required for real-time voice recognition?",
+			"reasoning": "This task involves developing a voice input handler, which requires expertise in speech recognition. Additionally, it needs to integrate with other components, making it more complex."
+		},
+		{
+			"taskId": 4,
+			"taskTitle": "Implement Local LLM Integration",
+			"complexityScore": 6,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "What are the necessary libraries and integrations required for local LLM integration?",
+			"reasoning": "This task involves integrating the local LLM with Assistant V1, which requires expertise in natural language processing. Additionally, it needs to integrate with other components, making it more complex."
+		},
+		{
+			"taskId": 5,
+			"taskTitle": "Implement Modular Action System",
+			"complexityScore": 9,
+			"recommendedSubtasks": 5,
+			"expansionPrompt": "What are the necessary APIs and integrations required for web search, email, notes, WhatsApp, etc.?",
+			"reasoning": "This task involves developing a modular action system, which requires expertise in software architecture and integration. Additionally, it needs to integrate with other components, making it more complex."
+		},
+		{
+			"taskId": 6,
+			"taskTitle": "Implement Menu Bar UI",
+			"complexityScore": 5,
+			"recommendedSubtasks": 3,
+			"expansionPrompt": "What are the necessary APIs and integrations required for settings persistence, logging, and visual indicators?",
+			"reasoning": "This task involves developing a menu bar UI, which requires expertise in user interface design. Additionally, it needs to integrate with other components, making it more complex."
+		},
+		{
+			"taskId": 7,
+			"taskTitle": "Implement Settings Persistence",
+			"complexityScore": 3,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "What are the necessary libraries and integrations required for persistence?",
+			"reasoning": "This task involves developing a system for persisting user settings, which is relatively straightforward."
+		},
+		{
+			"taskId": 8,
+			"taskTitle": "Implement Logging System",
+			"complexityScore": 4,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "What are the necessary libraries and integrations required for logging?",
+			"reasoning": "This task involves developing a logging system, which is relatively straightforward."
+		},
+		{
+			"taskId": 9,
+			"taskTitle": "Implement Visual Listening Indicator",
+			"complexityScore": 4,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "What are the necessary libraries and integrations required for visual indicators?",
+			"reasoning": "This task involves developing a visual listening indicator, which is relatively straightforward."
+		},
+		{
+			"taskId": 10,
+			"taskTitle": "Implement Web Search Integration",
+			"complexityScore": 7,
+			"recommendedSubtasks": 3,
+			"expansionPrompt": "What are the necessary libraries and integrations required for web search?",
+			"reasoning": "This task involves integrating web search functionality, which requires expertise in search algorithms. Additionally, it needs to integrate with other components, making it more complex."
+		}
+	]
+}

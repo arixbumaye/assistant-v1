@@ -1,0 +1,160 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Setup Project Repository",
+        "description": "Create a new project repository for Assistant V1 on GitHub, including necessary files and directories.",
+        "details": "Use GitHub CLI to create a new repository with the required structure. Initialize the project with Node.js and set up the necessary dependencies.",
+        "testStrategy": "Verify that the repository is created successfully and all necessary files are present.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create New Repository",
+            "description": "Set up the new GitHub repository for the project.",
+            "dependencies": [],
+            "details": "Use GitHub's web interface to create a new repository, or use the command line tool if you're comfortable with that.\n<info added on 2025-07-05T09:32:38.646Z>\nHere is the new text content that should be added to the subtask's details:\n\n\"Use GitHub CLI to create a new repository named 'assistant-v1' under your GitHub account, initialize the local directory with git, add a .gitignore, make the first commit, and push it to the remote repository. Ensure the repository is private or public as desired.\"\n</info added on 2025-07-05T09:32:38.646Z>",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Configure Repository Settings",
+            "description": "Set up the necessary files and directories for the project repository.",
+            "dependencies": [
+              1
+            ],
+            "details": "Create the necessary folders and files, such as a README file, to ensure the repository is properly configured.",
+            "status": "pending",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Implement Background Service for Mac",
+        "description": "Develop a background service/daemon for Assistant V1 that runs on Mac, allowing it to listen for user requests.",
+        "details": "Use Swift or Electron to create the daemon. Implement necessary APIs and integrations for voice input, local LLM integration, and menu bar UI.",
+        "testStrategy": "Verify that the daemon runs successfully in the background and can receive user requests.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Implement Voice Input Handler",
+        "description": "Develop a voice input handler that recognizes German and English voice commands, allowing users to interact with Assistant V1.",
+        "details": "Use a proven library for real-time voice recognition. Implement necessary APIs and integrations for local LLM integration and menu bar UI.",
+        "testStrategy": "Verify that the voice input handler can recognize user requests accurately in both German and English.",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Implement Local LLM Integration",
+        "description": "Integrate the local LLM with Assistant V1, allowing it to perform actions and answer user queries.",
+        "details": "Use Ollama or a similar library for local LLM integration. Implement necessary APIs and integrations for modular action system and menu bar UI.",
+        "testStrategy": "Verify that the local LLM can be used successfully in Assistant V1, allowing it to perform actions and answer user queries.",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Implement Modular Action System",
+        "description": "Develop a modular action system that allows Assistant V1 to perform actions and answer user queries.",
+        "details": "Use the local LLM integration to enable modular actions. Implement necessary APIs and integrations for web search, email, notes, WhatsApp, etc.",
+        "testStrategy": "Verify that the modular action system can be used successfully in Assistant V1, allowing it to perform actions and answer user queries.",
+        "priority": "high",
+        "dependencies": [
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Implement Menu Bar UI",
+        "description": "Develop a menu bar UI for Assistant V1 that allows users to customize settings and interact with the assistant.",
+        "details": "Use Electron or Swift to create the menu bar UI. Implement necessary APIs and integrations for settings persistence, logging, and visual indicators.",
+        "testStrategy": "Verify that the menu bar UI can be used successfully in Assistant V1, allowing users to customize settings and interact with the assistant.",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Implement Settings Persistence",
+        "description": "Develop a system for persisting user settings in Assistant V1, allowing them to be retained across restarts.",
+        "details": "Use a proven library for persistence. Implement necessary APIs and integrations for menu bar UI and logging.",
+        "testStrategy": "Verify that user settings are persisted successfully across restarts.",
+        "priority": "medium",
+        "dependencies": [
+          6
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Implement Logging System",
+        "description": "Develop a logging system for Assistant V1, allowing all interactions and actions to be logged for transparency and debugging.",
+        "details": "Use a proven library for logging. Implement necessary APIs and integrations for menu bar UI and settings persistence.",
+        "testStrategy": "Verify that the logging system can log all interactions and actions successfully.",
+        "priority": "medium",
+        "dependencies": [
+          6
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Implement Visual Listening Indicator",
+        "description": "Develop a visual listening indicator for Assistant V1, allowing users to know when the assistant is actively listening.",
+        "details": "Use Electron or Swift to create the visual indicator. Implement necessary APIs and integrations for menu bar UI and settings persistence.",
+        "testStrategy": "Verify that the visual listening indicator can be used successfully in Assistant V1, allowing users to know when the assistant is actively listening.",
+        "priority": "medium",
+        "dependencies": [
+          6
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Implement Web Search Integration",
+        "description": "Integrate web search functionality into Assistant V1, allowing users to perform searches and retrieve results.",
+        "details": "Use a proven library for web search. Implement necessary APIs and integrations for modular action system and menu bar UI.",
+        "testStrategy": "Verify that the web search integration can be used successfully in Assistant V1, allowing users to perform searches and retrieve results.",
+        "priority": "medium",
+        "dependencies": [
+          5
+        ],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-07-05T09:28:02.836Z",
+      "updated": "2025-07-05T09:28:02.836Z",
+      "description": "Tasks for master context"
+    }
+  }
+}
